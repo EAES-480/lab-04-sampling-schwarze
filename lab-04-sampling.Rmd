@@ -15,6 +15,8 @@ editor_options:
   chunk_output_type: inline
 ---
 
+> GM GRADE 9.75/10 - Solid conceptual work and good writing on seasonality, daily cycles, and sampling trade-offs.
+
 ```{r setup, echo=FALSE, message=FALSE, warning=FALSE}
 library(tidyverse)
 library(lubridate)
@@ -456,6 +458,8 @@ What feature of time series data (hint: autocorrelation) is relevant here?
 
 > In this case, the cluster sampling did not have higher variance than SRS, and was actually the most representative method used so far. However, it may show more variance in the case of multiple clusters where data varies greatly per cluster, providing a skewed interpretation of data. The feature relevant here is autocorrelation because the homogeneity would be autocorrelated within clusters and intensify the inaccuracy. 
 
+> GM: this is a surprsingly outcome, I won't grade down, but generally cluster sampling will not work well on this kind of cyclical time series data.
+
 ---
 
 ## Exercise 3 — Quasi-continuous sampling (fixed schedule time series)
@@ -547,6 +551,8 @@ Explain *why* in terms of (i) seasonal/diurnal structure and (ii) dependence/aut
 If you were designing a real EAES study with limited field days, what hybrid strategy would you propose (e.g., stratified + clustered)?
 
 > The stratgey that gave the best estimate of the population mean was the cluster method, and the one that gave the best estimate of the SD was quasi-continuous. I think the cluster method provided a good estimate of the population mean because it targeted the areas where more plants were present, likely as a result of plants' clumped behavior patterns. In terms of standard deviation, I think the quasi-continuous method did a good job because it collected data over a longer period of time that better encapsulated the seasonality changes demonstrated in the population data. If I were desigining a real EaES study with a limited amount of time, I would choose to use a stratified method paired with systematic sampling. This is because the systematic design would be demonstrative of possible gradients in data, illustrating trends, while the stratified aspect would target areas of interest, eliminating areas that would possibly introduce unnecessary outliers. 
+
+> GM: -0.25 In your run, quasi-continuous performed best. For RECO, which has strong seasonal and diurnal structure plus autocorrelation, a hybrid approach (stratified by month/season + quasi-continuous or systematic within seasons) is often effective.
 
 ---
 
